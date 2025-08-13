@@ -1,0 +1,151 @@
+.linebreak {
+  white-space: pre-line;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fixed header overlay */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #3c281c;
+  display: flex;
+  flex-direction: column; /* stack title + tagline */
+  align-items: flex-start; /* left-align text */
+  justify-content: center; /* vertical center within padding */
+  padding: 8px 48px;
+  gap: 12px; /* space between title and tagline */
+  z-index: 1000;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header lines */
+.header-title {
+  color: #806b55;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.header-tagline {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 4fr;
+  min-height: 750px;
+  padding-top: calc(3rem + 0.85rem + 16px); /* in first container */
+  justify-items: stretch; /* make main content stretch horizontally */
+  display: grid;
+  align-items: stretch; /* ensures both columns stretch to the same height */
+  flex: 1; /* makes this container grow to fill the space between header and footer */
+  white-space: pre-line;
+}
+
+/* Sidebar styles */
+.left-sidebar {
+  background-color: #112b43;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* keeps items at top */
+}
+
+.sidebar-item {
+  margin-bottom: 2rem;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.sidebar-desc {
+  font-size: 0.85rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* Main content area */
+.main-content {
+  background-color: #ffffff;
+  color: #3c281c;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Optional key point styling */
+.key-point {
+  color: #806b55;
+}
+
+.section-title {
+  color: #806b55;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.site-footer {
+  margin-top: 1rem;
+  padding: 1rem 0;
+  max-height: 100px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.site-footer .footer-links {
+  margin-bottom: 1rem;
+  color: #215f9a;
+}
+
+.site-footer a {
+  color: #215f9a;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.left-sidebar,
+.main-content {
+  padding-top: 5rem; /* adds extra “newlines” worth of space */
+  height: 100%;
+}
+
+.text-wrapper {
+  max-width: 1200px; /* or whatever character width looks good */
+  margin-left: 0; /* align to left, or auto for centered */
+  margin-right: 0;
+  font-size: 1.1rem;
+}

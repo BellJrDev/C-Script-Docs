@@ -8,14 +8,14 @@
 - Allows for a return type similar to TypeScript's `T | Undefined`
 - Designed to place less responsibility on clients to do safety checks on the object (compared to something like `std::optional`)
 
-To resolve a Nullable<T> object into it' non-null T equivalent, a Resolve() method has been provided, among others.
+To resolve a `Nullable<T>` object into it' non-null T equivalent, a Resolve() method has been provided, among others.
 
 ## API Reference
 
 [ Doxy Link Space ]  
 This space will be linked to the doxygen page for this API as soon as it's created.
 
-<br>
+<br/>
 
 ## Key Features
 
@@ -25,7 +25,7 @@ This space will be linked to the doxygen page for this API as soon as it's creat
 - `constexpr` method signatures optimize move semantics for std containers.
 - The API is minimal for a clutter-free experience befitting this kind of wrapper.
 
-<br>
+<br/>
 
 ## Usage Scenarios
 
@@ -34,32 +34,32 @@ Sometimes there is no good "default" value in a given context. In these cases, i
 
 - This also makes functions more robust by enabling them to work with types without default constructor support.
 
-<br>
+<br/>
 
 **(B) Data type to convey possible nullness**  
 Many cases involve data that necessarily lacks nullness guarantees at some point (e.g. external queries, creation based on conditions, etc.). Storing such data as `Nullable<T>` is beneficial in 2 ways.
 
 1. Anyone seeing the type will immediately know that it's potentially null.
-2. It is a simple way of representing the information, not having the caveats of the T\* / nullptr method.
+2. It is a simple way of representing the information, not having the caveats of the nullptr method.
    - No worries about someone deleting the data using the pointer
    - No need to directly handle using move semantics or smart pointer logic just to achieve possible nullness  
      (Neither of these are bad, of course. There's just no need to buy a new car if all you really need is a new back wheel.)
 
-<br>
+<br/>
 
 ## Quirks & Limitations
 
 ### Initialize Destination Variable Beforehand
 
-`Resolve()` and `TryUse()` help you safely unwrap a Nullable<T>, but they don’t magically initialize your variables.
+`Resolve()` and `TryUse()` help you safely unwrap a `Nullable<T>`, but they don’t magically initialize your variables.
 
-Given a Nullable<T> in a null state, `Resolve()` simply returns false without making any update to the destination variable.
+Given a `Nullable<T>` in a null state, `Resolve()` simply returns false without making any update to the destination variable.
 
 But if destination was never initialized before it was given to `Resolve()`, then it is still uninitialized after execution. This is a classic recipe for undefined behavior, not specific to `Nullable<T>` or `C-Script`, but rather inherent to programming.
 
 Therefore, to prevent falling into that trap, **always initialize variables before they are used** -- even variables used as input params to callables like `Resolve()`.
 
-<br>
+<br/>
 
 ## Design Decisions
 
@@ -82,7 +82,7 @@ This inversion of responsibility means:
 - Positive safety and DX implications follow
   - Removing the possibility of nullptr dereferences and hidden heap allocations makes working with `Nullable<T>` straighforward and safety-conscious.
 
-<br>
+<br/>
 
 ## Examples
 

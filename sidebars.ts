@@ -4,32 +4,36 @@ const sidebars: SidebarsConfig = {
   docs: [
     {
       type: "category",
-      label: "API",
+      label: "Guides",
       items: [
         {
           type: "category",
           label: "Queues",
           items: [
-            "api/Queues/Queue",
-            "api/Queues/Queue_Classic",
-            "api/Queues/Queue_Cpps",
-            "api/Queues/Queue_RO",
-            "api/Queues/Queue_DE",
+            "guides/Queues/Queue",
+            "guides/Queues/Queue_Classic",
+            "guides/Queues/Queue_Cpps",
+            "guides/Queues/Queue_RO",
+            "guides/Queues/Queue_DE",
           ],
         },
         {
           type: "category",
           label: "Lists",
-          items: ["api/Lists/List", "api/Lists/CList", "api/Lists/DList"],
+          items: [
+            "guides/Lists/List",
+            "guides/Lists/CList",
+            "guides/Lists/DList",
+          ],
         },
         {
           type: "category",
           label: "SpecialTypes",
-          items: ["api/SpecialTypes/Nullable"],
+          items: ["guides/SpecialTypes/Nullable"],
         },
-        "api/Array",
-        "api/String",
-        "api/Stack",
+        "guides/Array",
+        "guides/String",
+        "guides/Stack",
       ],
     },
   ],
