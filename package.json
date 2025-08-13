@@ -2,6 +2,7 @@
   "name": "cppdocs",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://BellJrDev.github.io/C-Script-Docs",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -12,7 +13,8 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "depl": "rm -rf docs && cp -r build docs && git add docs && git commit -m 'Update GitHub Pages' && git push"
   },
   "dependencies": {
     "@docusaurus/core": "3.8.1",
