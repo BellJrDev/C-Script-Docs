@@ -56,8 +56,8 @@ function App() {
           <div className="text-wrapper">
             <p>
               The C-Script library is a set of tools designed to enhance the
-              developer experience (DX) for C++ programmers. C++. Inspired by
-              the excellent experience associated with TypeScript development,
+              developer experience (DX) for C++ programmers. Inspired by the
+              excellent experience associated with TypeScript development,
               C-Script offers sleek, intuitive APIs for several essential ADTs
               in C++.
             </p>
