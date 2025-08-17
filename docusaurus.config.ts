@@ -10,7 +10,7 @@ const config: Config = {
   favicon: "img/favicon.ico",
 
   url: "https://BellJrDev.github.io",
-  baseUrl: "/C-Script-Docs/",
+  baseUrl: "/",
 
   organizationName: "BellJrDev",
   projectName: "C-Script-Docs",
