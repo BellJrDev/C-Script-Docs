@@ -41,7 +41,7 @@ const config: Config = {
       darkTheme: prismThemes.oneDark,
     },
     colorMode: {
-      defaultMode: "light",
+      defaultMode: "dark",
     },
   } satisfies Preset.ThemeConfig,
 };
